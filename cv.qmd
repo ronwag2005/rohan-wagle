@@ -1,0 +1,11 @@
+---
+title: "CV"
+---
+
+<p class="page-intro">A full academic CV covering my education, research and professional experience, projects, and editorial positions. Last updated October 2026.</p>
+
+<div class="cv-actions">
+<a href="assets/cv/Rohan_Wagle_CV.pdf" target="_blank"><i class="bi bi-file-earmark-pdf"></i> Download CV (PDF)</a>
+</div>
+
+<iframe class="cv-embed" src="assets/cv/Rohan_Wagle_CV.pdf" title="Rohan Wagle CV"></iframe>

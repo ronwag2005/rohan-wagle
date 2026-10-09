@@ -1,0 +1,53 @@
+---
+title: "Writing"
+---
+
+<p class="page-intro">Long-form journalism and cultural criticism written as a Junior Editor at <a href="https://www.the-edict.in" target="_blank">The Edict</a>, Ashoka University's student newspaper, alongside personal essays kept on my blog.</p>
+
+<div class="research-section-title">
+<h2>The Edict</h2>
+</div>
+<hr class="section-divider">
+<div class="writing-grid">
+<div class="writing-card writing-featured">
+<p class="writing-date">January 2026 &middot; Latest</p>
+<p class="writing-title"><a class="stretched-link" href="https://www.instagram.com/p/DTPj745k7ni/" target="_blank">Geese, <em>Getting Killed</em> &mdash; An Album Review</a></p>
+<p class="writing-desc">On the jagged, spontaneous energy of Geese's latest record. </p>
+<p class="writing-byline">Rohan Wagle</p>
+<span class="writing-link">Read on Instagram <i class="bi bi-arrow-right-short"></i></span>
+</div>
+<div class="writing-card">
+<p class="writing-date">October 2025</p>
+<p class="writing-title"><a class="stretched-link" href="https://www.the-edict.in/post/chronicles-of-the-untranslated-bringing-india-s-non-fiction-voices-to-the-centre" target="_blank">Chronicles of the Untranslated: Bringing India's Non-Fiction Voices to the Centre</a></p>
+<p class="writing-desc">On the Chronicles series: a collaboration between the Ashoka Centre for Translation and Penguin Random House, and how letting translators choose the texts that matter to them resists market-driven publishing and widens the English reader's sense of regional non-fiction.</p>
+<p class="writing-byline">Rohan Wagle</p>
+<span class="writing-link">Read the article <i class="bi bi-arrow-right-short"></i></span>
+</div>
+<div class="writing-card">
+<p class="writing-date">October 2024</p>
+<p class="writing-title"><a class="stretched-link" href="https://www.the-edict.in/post/camille-claudel-into-the-fire-a-review" target="_blank">Camille Claudel: Into the Fire &mdash; A Review</a></p>
+<p class="writing-desc">A review of Jake Heggie's six-part song cycle on the life of the sculptor Camille Claudel, performed by pianist Nadine Jo Crasto and counter-tenor Subin Mathai. The performance traces Claudel's work, her years with Rodin, and the three decades of institutionalisation that followed.</p>
+<p class="writing-byline">Soham Prasad and Rohan Wagle</p>
+<span class="writing-link">Read the article <i class="bi bi-arrow-right-short"></i></span>
+</div>
+<div class="writing-card">
+<p class="writing-date">September 2024</p>
+<p class="writing-title"><a class="stretched-link" href="https://www.the-edict.in/post/from-plate-to-politics-the-question-of-diversity-in-ashokan-palates" target="_blank">From Plate to Politics: The Question of Diversity in Ashokan Palates</a></p>
+<p class="writing-desc">How a campus shift towards corporate food chains and away from regional cooking carries the caste politics of Indian food with it, and what goes missing when the palates of minority and lower-caste students are left off the menu.</p>
+<p class="writing-byline">Rohan Wagle, Teista Dwivedi, and Devadeepa</p>
+<span class="writing-link">Read the article <i class="bi bi-arrow-right-short"></i></span>
+</div>
+</div>
+
+<div class="research-section-title">
+<h2>Blog</h2>
+</div>
+<hr class="section-divider">
+<div class="blog-banner">
+<div class="blog-banner-icon"><i class="bi bi-journal-text"></i></div>
+<div class="blog-banner-body">
+<p class="blog-banner-title"><a class="stretched-link" href="https://ronwag.wordpress.com" target="_blank">ronwag.wordpress.com</a></p>
+<p class="blog-banner-desc">A running collection of my essays and personal writing.</p>
+</div>
+<div class="blog-banner-arrow"><i class="bi bi-arrow-right"></i></div>
+</div>

@@ -1,0 +1,44 @@
+---
+title: "Materials"
+---
+
+<p class="page-intro">Guides, documentation, and teaching notes. These currently cover <a href="https://cran.r-project.org/web/packages/phdid/index.html" target="_blank">phdid</a>, my R package for partial homogeneity in staggered difference-in-differences. I will be adding notes on economics studies and coding here as I go.</p>
+
+<div class="research-section-title">
+<h2>phdid Vignettes</h2>
+</div>
+<hr class="section-divider">
+<p class="section-note">Written to walk someone through empirical applications of the package in R.</p>
+<div class="materials-grid">
+<div class="writing-card">
+<p class="writing-date">phdid vignette</p>
+<p class="writing-title"><a class="stretched-link" href="https://cran.r-project.org/web/packages/phdid/vignettes/mpdta.html" target="_blank">Minimum Wages and Teen Employment: Recovering Partial Homogeneity</a></p>
+<p class="writing-desc">Walks through the county-level minimum wage analysis of Callaway and Sant'Anna (2021): taking cohort-time effects from <code>did::att_gt()</code>, testing whether there is heterogeneity worth recovering, and grouping the effects with both a point partition and a Dirichlet Process posterior.</p>
+<span class="writing-link">Read the vignette <i class="bi bi-arrow-right-short"></i></span>
+</div>
+<div class="writing-card">
+<p class="writing-date">phdid vignette</p>
+<p class="writing-title"><a class="stretched-link" href="https://cran.r-project.org/web/packages/phdid/vignettes/simulation.html" target="_blank">When Partial Homogeneity Helps, and When It Does Not</a></p>
+<p class="writing-desc">A reduced-scale Monte Carlo showing how the precision gains from pooling cohort-time effects depend on how well separated those effects are, and how the estimators compare on variance, bias, and interval coverage.</p>
+<span class="writing-link">Read the vignette <i class="bi bi-arrow-right-short"></i></span>
+</div>
+</div>
+
+<div class="research-section-title">
+<h2>Package Reference</h2>
+</div>
+<hr class="section-divider">
+<div class="materials-grid">
+<div class="writing-card">
+<p class="writing-date">CRAN</p>
+<p class="writing-title"><a class="stretched-link" href="https://cran.r-project.org/web/packages/phdid/index.html" target="_blank">phdid on CRAN</a></p>
+<p class="writing-desc">The package page &mdash; installation, dependencies, and release history. Install with <code>install.packages("phdid")</code>.</p>
+<span class="writing-link">View on CRAN <i class="bi bi-arrow-right-short"></i></span>
+</div>
+<div class="writing-card">
+<p class="writing-date">Documentation</p>
+<p class="writing-title"><a class="stretched-link" href="https://cran.r-project.org/web/packages/phdid/phdid.pdf" target="_blank">Reference Manual</a></p>
+<p class="writing-desc">Full function-level documentation for the estimators, heterogeneity tests, sampler diagnostics, and the calibrated data-generating process.</p>
+<span class="writing-link">Read the manual <i class="bi bi-arrow-right-short"></i></span>
+</div>
+</div>

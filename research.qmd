@@ -1,0 +1,116 @@
+---
+title: "Research"
+---
+
+<div class="research-section-title">
+<h2>Working Papers</h2>
+</div>
+<hr class="section-divider">
+<div class="project-item">
+<div class="project-meta"><span class="project-year">2026</span></div>
+<div class="project-body">
+<p class="project-title">A Bayesian Approach to Partial Homogeneity in Staggered Difference-in-Differences</p>
+<p class="project-authors">with <a href="https://www.parusharora.com" target="_blank">Parush Arora</a></p>
+<p class="project-software"><strong>Software:</strong> <em>phdid</em> &mdash; an R package implementing the paper's estimators and diagnostics, available on CRAN. Vignettes and documentation are under <a href="materials.html">Materials</a>.</p>
+<div class="project-buttons">
+<span class="btn-research abstract-toggle" role="button" tabindex="0" aria-expanded="false" aria-controls="abstract-bayesian-did" data-target="abstract-bayesian-did">ABS</span>
+<a href="https://dp.ashoka.edu.in/ash/wpaper/paper166_0.pdf" target="_blank" class="btn-research">PDF</a>
+<a href="materials.html" class="btn-research"><i class="bi bi-box-seam"></i> phdid <span class="btn-note">package &amp; vignettes</span></a>
+</div>
+<div id="abstract-bayesian-did" class="abstract-content" style="display: none;">
+<p><strong>Abstract:</strong> Addresses heterogeneous treatment effect estimation in staggered difference-in-differences designs, where existing approaches force a choice between an inefficient, fully-flexible estimator or a biased pooled one. We instead use a Dirichlet Process mixture model to identify natural groupings among cohort-time treatment effects, delivering point estimates, credible intervals, and co-clustering probabilities via a collapsed Gibbs sampler. Simulations show 26&ndash;52% variance reduction relative to standard flexible estimators while maintaining near-nominal coverage.</p>
+</div>
+</div>
+</div>
+
+<hr class="entry-divider">
+
+<div class="research-section-title">
+<h2>Other Projects</h2>
+</div>
+<hr class="section-divider">
+<div class="project-item">
+<div class="project-meta"><span class="project-year">2026</span></div>
+<div class="project-body">
+<p class="project-title">AI Adoption and Human Capital Formation in Developing Economies (Work in Progress)</p>
+<div class="project-buttons">
+<span class="btn-research abstract-toggle" role="button" tabindex="0" aria-expanded="false" aria-controls="abstract-ai-human-capital" data-target="abstract-ai-human-capital">ABS</span>
+<a href="assets/papers/ai_adoption_human_capital.pdf" target="_blank" class="btn-research">PDF</a>
+</div>
+<div id="abstract-ai-human-capital" class="abstract-content" style="display: none;">
+<p><strong>Abstract:</strong> Develops a tractable theoretical framework combining task-based automation models (Acemoglu and Restrepo) with search-friction models of skill formation (Wasmer; Acemoglu) to study AI adoption in developing economies. The model identifies an "AI learning gap": as general-purpose AI becomes more reliable, it simultaneously erodes workers' incentive to acquire specialized, AI-complementary skills and firms' incentive to train them &mdash; a dynamic that can trap the economy in a low-skill equilibrium. Derives comparative statics, three possible steady states, and testable empirical predictions.</p>
+</div>
+</div>
+</div>
+
+<div class="project-item">
+<div class="project-meta"><span class="project-year">2026</span></div>
+<div class="project-body">
+<p class="project-title">Mobility Shocks and Employment Outcomes during COVID-19</p>
+<p class="project-authors">with <a href="https://yash-k21.github.io" target="_blank">Yash Khaitan</a> and <a href="https://shagun-khetan.github.io" target="_blank">Shagun Khetan</a></p>
+<div class="project-buttons">
+<span class="btn-research abstract-toggle" role="button" tabindex="0" aria-expanded="false" aria-controls="abstract-mobility-shocks" data-target="abstract-mobility-shocks">ABS</span>
+<a href="assets/papers/mobility_shocks_covid19.pdf" target="_blank" class="btn-research">PDF</a>
+<a href="https://github.com/shagun-khetan/mobility-lfp" target="_blank" class="btn-research"><i class="bi bi-github"></i> CODE</a>
+</div>
+<div id="abstract-mobility-shocks" class="abstract-content" style="display: none;">
+<p><strong>Abstract:</strong> Combines individual-level panel data from the Consumer Pyramids Household Survey with district-level Google mobility data to study how lockdown-induced mobility shocks affected employment in India, using a difference-in-differences design with individual and time fixed effects. Average employment effects are modest but mask sharp heterogeneity: losses are concentrated among the lowest income quartile and among salaried/self-employed workers, and are driven primarily by increased job exits rather than reduced hiring. Wage declines among those who remain employed are substantial, particularly for women.</p>
+</div>
+</div>
+</div>
+
+<div class="project-item">
+<div class="project-meta"><span class="project-year">2026</span></div>
+<div class="project-body">
+<p class="project-title">Dimensionality Reduction for Sparse Movie Ratings Data: PCA via Efficient Power Method Implementation</p>
+<div class="project-buttons">
+<span class="btn-research abstract-toggle" role="button" tabindex="0" aria-expanded="false" aria-controls="abstract-movielens-pca" data-target="abstract-movielens-pca">ABS</span>
+<a href="assets/papers/movielens_pca_power_method.pdf" target="_blank" class="btn-research">PDF</a>
+<a href="https://github.com/ronwag2005/Sparse-PCA-Power-Method" target="_blank" class="btn-research"><i class="bi bi-github"></i> CODE</a>
+<a href="https://rpubs.com/ronwag2005/1429898" target="_blank" class="btn-research"><i class="bi bi-box-arrow-up-right"></i> INTERACTIVE PLOT</a>
+</div>
+<div id="abstract-movielens-pca" class="abstract-content" style="display: none;">
+<p><strong>Abstract:</strong> Implements a Simultaneous Power Method with an "implicit centering" modification to compute PCA on the highly sparse (93.7%) MovieLens 100K ratings matrix without ever densifying it. The recovered components yield interpretable latent axes of movie taste &mdash; market engagement versus critical-acclaim-vs-blockbuster preference &mdash; and are used to test how users' positions along these axes relate to age and gender.</p>
+</div>
+</div>
+</div>
+
+<div class="project-item">
+<div class="project-meta"><span class="project-year">2025</span></div>
+<div class="project-body">
+<p class="project-title">Using Data Mining to Predict Secondary School Student Performance: A Replication and Extension</p>
+<p class="project-authors">with Aditya Kumar, Rutupurna Debalina Naik, and Sidra Shaikh</p>
+<div class="project-buttons">
+<span class="btn-research abstract-toggle" role="button" tabindex="0" aria-expanded="false" aria-controls="abstract-school" data-target="abstract-school">ABS</span>
+<a href="assets/papers/school_performance_replication.pdf" target="_blank" class="btn-research">PDF</a>
+<a href="https://github.com/ronwag2005/student-prediction-plus" target="_blank" class="btn-research"><i class="bi bi-github"></i> CODE</a>
+</div>
+<div id="abstract-school" class="abstract-content" style="display: none;">
+<p><strong>Summary:</strong> Replicates Cortez and Silva's (2008) study on predicting secondary-school final grades from school, social, and demographic data, confirming the original performance hierarchy across Decision Tree, SVM, and Random Forest models. Extends the work with wrapper- and filter-based feature selection, showing that a small set of 9&ndash;23 "core predictors" matches or beats the original 30+ feature models once prior grades are unavailable &mdash; with the largest gains for the SVM, consistent with its known sensitivity to irrelevant inputs.</p>
+</div>
+</div>
+</div>
+
+<!-- Abstract dropdown toggles -->
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  document.querySelectorAll(".abstract-toggle").forEach(function (btn) {
+    var panel = document.getElementById(btn.dataset.target);
+    if (!panel) return;
+
+    function toggle() {
+      var open = panel.style.display !== "none";
+      panel.style.display = open ? "none" : "block";
+      btn.setAttribute("aria-expanded", String(!open));
+    }
+
+    btn.addEventListener("click", toggle);
+    btn.addEventListener("keydown", function (e) {
+      if (e.key === "Enter" || e.key === " ") {
+        e.preventDefault();
+        toggle();
+      }
+    });
+  });
+});
+</script>

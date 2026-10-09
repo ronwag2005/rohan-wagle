@@ -1,0 +1,205 @@
+%-------------------------------------------------------------------------------
+%  Academic CV -- Rohan Sameer Wagle
+%  Centred header, ruled small-caps section headings, dates flush right.
+%  Body text is black; only hyperlinks are coloured. No logo.
+%  Compile with: pdflatex Rohan_Wagle_CV.tex
+%-------------------------------------------------------------------------------
+\documentclass[11pt,letterpaper]{article}
+
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern}
+\usepackage[margin=0.72in]{geometry}
+\usepackage{titlesec}
+\usepackage{enumitem}
+\usepackage{xcolor}
+\usepackage{fontawesome5}
+\usepackage[hidelinks]{hyperref}
+
+% Links are the one exception to the all-black text: a sober blue so they
+% read as clickable without shouting on a printed page.
+\definecolor{linkblue}{HTML}{1A4F8A}
+\newcommand{\weblink}[2]{\href{#1}{\textcolor{linkblue}{#2}}}
+
+% Section headings: small caps, black, full-width rule underneath.
+\titleformat{\section}
+  {\normalfont\large\scshape}
+  {}{0em}{}[\vspace{-0.7em}\rule{\textwidth}{0.6pt}]
+\titlespacing*{\section}{0pt}{0.95em}{0.55em}
+
+\pagestyle{empty}
+
+% An entry heading: \entry{Organisation / title}{dates}
+% Title and date sit in side-by-side boxes so a long title wraps within its
+% own column instead of colliding with the date.
+\newcommand{\entry}[2]{%
+  \noindent
+  \begin{minipage}[t]{0.78\textwidth}\raggedright #1\end{minipage}%
+  \hfill
+  \begin{minipage}[t]{0.21\textwidth}\raggedleft{\small #2}\end{minipage}%
+  \par\vspace{0.15em}}
+
+% A sub-line under an entry heading.
+\newcommand{\subentry}[1]{%
+  \noindent{\small #1}\par\vspace{0.25em}}
+
+% Tight bullet list for entry descriptions.
+\newenvironment{entrylist}
+  {\begin{itemize}[leftmargin=1.3em, itemsep=0.1em, topsep=0.2em, parsep=0pt]}
+  {\end{itemize}\vspace{0.28em}}
+
+\newcommand{\pipe}{\;\textbar\;}
+
+\begin{document}
+
+%-------------------------------------------------------------------------------
+\begin{center}
+  {\LARGE\scshape Rohan Wagle}\\[0.5em]
+  \href{mailto:rohan.wagle_ug2023@ashoka.edu.in}{rohan.wagle\_ug2023@ashoka.edu.in}
+  \quad\textbar\quad
+  +91 98811 27647
+  \quad\textbar\quad
+  \href{https://www.linkedin.com/in/rohan-wagle-6a9328228}{\faLinkedin\,LinkedIn}
+\end{center}
+
+\vspace{0.4em}
+
+%-------------------------------------------------------------------------------
+\section{Education}
+
+\entry{\textbf{Ashoka University}\pipe BA (Hons.\ with Research) in Economics}{2027}
+\subentry{Minor in Mathematics \quad$\cdot$\quad 3.51/4 CGPA}
+
+%-------------------------------------------------------------------------------
+\section{Skills}
+
+\noindent R, Python, Stata, SQL, Excel, \LaTeX{}, GitHub
+
+%-------------------------------------------------------------------------------
+\section{Internships and Experience}
+
+\entry{\textbf{Ashoka University and DAI Advisory}\pipe Research Assistant}{Apr 2026 -- Jul 2026}
+\begin{entrylist}
+  \item Co-managed daily field operations and survey logistics for a large-scale
+        randomized controlled trial (RCT) tracking a baseline universe of over
+        7,000 respondents across target markets
+  \item Diagnosed live delivery risks such as respondent refusals,
+        postponements, and eligibility shifts for a 69-person field team (57
+        enumerators, 12 supervisors), re-sequencing deployment daily and testing
+        targeted pitch strategies to keep the sample on track
+\end{entrylist}
+
+\entry{\textbf{Purnartha Investment Advisers Pvt.\ Ltd.}\pipe Equity Research Intern}{May 2025 -- Jul 2025}
+\begin{entrylist}
+  \item Standardized and validated financial data for 300+ listed Indian
+        companies, designing repeatable cleaning and cross-checking routines
+        that caught inconsistencies before they propagated into valuation models
+        and sector reports
+  \item Reframed an open-ended research question --- \emph{which Indian firms
+        move together, and why?} --- as a measurable graph problem, building a
+        quantitative framework in Python (NetworkX) to model inter-firm linkages
+        (supply-chain, ownership, industry) and estimate performance spillovers
+\end{entrylist}
+
+%-------------------------------------------------------------------------------
+\section{Publications}
+
+\entry{\textbf{A Bayesian Approach to Partial Homogeneity in Staggered
+Difference-in-Difference} {\small (with Parush Arora)}}{Jul 2026}
+\vspace{0.35em}
+\subentry{Ashoka University Economics Discussion Paper Series}
+\begin{entrylist}
+  \item Designed and ran the Monte Carlo framework in R benchmarking a novel
+        $\ell_0$-penalized estimator against standard Two-Way Fixed Effects
+        across 11 simulated data-generating environments
+  \item Quantified the bias--variance tradeoff, proving a 26--52\% reduction in
+        estimator variance with no attenuation bias, and automated 40+
+        diagnostic dashboards to keep every run auditable
+  \item Stress-tested the estimator on Cengiz et al.\ (2019)'s minimum-wage
+        study, detecting heterogeneous treatment effects that the pooled
+        specification masked
+  \item Developed and published
+        \weblink{https://cran.r-project.org/web/packages/phdid/index.html}{\texttt{phdid}},
+        an R package on CRAN implementing the paper's estimators, heterogeneity
+        tests, and sampler diagnostics
+\end{entrylist}
+
+%-------------------------------------------------------------------------------
+\section{Projects}
+
+\entry{\textbf{Efficient PCA Implementation on Sparse Data Matrices}}{Jan 2026 -- Apr 2026}
+\subentry{Data Science, Multivariate Statistics}
+\begin{entrylist}
+  \item Implemented the
+        \weblink{https://github.com/ronwag2005/Sparse-PCA-Power-Method}{Block
+        Power Method for PCA from scratch in R} with a custom implicit-centering
+        algorithm, eliminating the memory blow-up from matrix densification that
+        makes off-the-shelf implementations fail on sparse data
+  \item Recovered a low-rank subspace on MovieLens 100K capturing 35.28\% of
+        variance, then built gender-stratified loading plots to segment the user
+        base, applying dimensionality reduction techniques for customer
+        segmentation and targeting
+\end{entrylist}
+
+\entry{\textbf{Predicting Secondary School Student Performance}}{Jul 2025 -- Aug 2025}
+\subentry{Machine Learning and Data Analysis}
+\begin{entrylist}
+  \item Built a
+        \weblink{https://github.com/ronwag2005/student-prediction-plus}{supervised
+        ML pipeline in R} predicting student outcomes from demographic, social
+        and academic features, replicating Cortez \& Silva (2008) as an explicit
+        benchmark before attempting to beat it
+  \item Improved predictive accuracy 15\% over the published model through
+        feature engineering and hyperparameter tuning, evaluating each iteration
+        against the benchmark rather than tuning to a single metric
+\end{entrylist}
+
+\entry{\textbf{Independent Research Study}\pipe Advised by Prof.\ Anuradha Saha}{Jan 2026 -- Apr 2026}
+\subentry{Macroeconomics}
+\begin{entrylist}
+  \item Modelled how AI-induced task restructuring, labour search frictions, and
+        endogenous skill acquisition interact in developing economies,
+        simulating firm training incentives against worker skill choices across
+        three equilibria
+  \item Identified an ``AI learning gap'' showing how premature AI adoption traps
+        economies in low-skill equilibria, and converted it into actionable
+        policy diagnostics for regulatory standards
+\end{entrylist}
+
+%-------------------------------------------------------------------------------
+\section{Positions Held}
+
+\entry{\textbf{Editor}\pipe Ashoka University Economics Review}{Sep 2025 -- Apr 2026}
+\begin{entrylist}
+  \item Reviewed 5+ student-authored empirical papers for the university's
+        flagship peer-reviewed journal, evaluating their identification
+        strategy, robustness and replicability and returning structured,
+        actionable feedback to authors
+  \item Scaled interest in quantitative research across the student body by
+        running coding workshops and maintaining shared digital repositories for
+        research roles and conferences
+\end{entrylist}
+
+\entry{\textbf{Junior Editor}\pipe The Edict}{Sep 2023 -- Apr 2026}
+\begin{entrylist}
+  \item Authored and edited 10+ long-form pieces for an audience of 1,000+,
+        structuring primary interviews and field evidence into clear long-form
+        articles for a non-specialist readership
+\end{entrylist}
+
+\entry{\textbf{Peer Tutor}\pipe Undergraduate Writing Program, Ashoka
+University}{Aug 2025 -- Dec 2025}
+\begin{entrylist}
+  \item Served as sole teaching assistant for a class of 15 first-year students
+        in Introduction to Critical Thinking, the university's compulsory
+        foundation course
+  \item Guided class discussions and ran a writing workshop, reviewing essay
+        drafts and returning feedback in weekly one-on-one office hours
+\end{entrylist}
+
+%-------------------------------------------------------------------------------
+\section{Languages Known}
+
+\noindent English, Hindi, and Marathi (Native)
+
+\end{document}

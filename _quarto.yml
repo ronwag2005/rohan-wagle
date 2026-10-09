@@ -1,21 +1,46 @@
 project:
   type: website
+  output-dir: _site
 
 website:
-  title: "my-portfolio"
+  title: "Rohan Wagle"
+  description: "Personal academic website."
+  
   navbar:
+    background: light
+    type: light
     left:
       - href: index.qmd
         text: Home
-      - about.qmd
+      - href: research.qmd
+        text: Research
+      - href: materials.qmd
+        text: Materials
+      - href: writing.qmd
+        text: Writing
+      - href: cv.qmd
+        text: CV
+
+  page-footer:
+    border: true
+    background: light
+    left: "&copy; Rohan Wagle"
+    right:
+      - icon: github
+        href: https://github.com/ronwag2005
+        aria-label: GitHub
+      - icon: linkedin
+        href: https://www.linkedin.com/in/rohan-wagle-6a9328228
+        aria-label: LinkedIn
+      - icon: envelope
+        href: mailto:rohan.wagle_ug2023@ashoka.edu.in
+        aria-label: Email
 
 format:
   html:
-    theme:
-      - cosmo
-      - brand
+    theme: cosmo
     css: styles.css
-    toc: true
-
-
-
+    toc: false
+    number-sections: false
+    grid:
+      body-width: 1100px
