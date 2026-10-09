@@ -1,5 +1,10 @@
 ---
 title: "Writing"
+description-meta: "Long-form journalism and cultural criticism by Rohan Wagle for The Edict, Ashoka University's student newspaper, alongside personal essays."
+open-graph:
+  description: "Long-form journalism and cultural criticism by Rohan Wagle for The Edict, Ashoka University's student newspaper, alongside personal essays."
+twitter-card:
+  description: "Long-form journalism and cultural criticism by Rohan Wagle for The Edict, Ashoka University's student newspaper, alongside personal essays."
 ---
 
 <p class="page-intro">Long-form journalism and cultural criticism written as a Junior Editor at <a href="https://www.the-edict.in" target="_blank">The Edict</a>, Ashoka University's student newspaper, alongside personal essays kept on my blog.</p>

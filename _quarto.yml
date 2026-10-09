@@ -4,8 +4,15 @@ project:
 
 website:
   title: "Rohan Wagle"
-  description: "Personal academic website."
-  
+  description: "Personal academic website of Rohan Wagle — economics research, writing, and the phdid R package."
+  site-url: https://ronwag2005.github.io/rohan-wagle/
+  image: assets/Main_Photo.jpeg
+
+  # Rich previews when a link is shared, and canonical URLs for search engines.
+  open-graph: true
+  twitter-card:
+    card-style: summary
+
   navbar:
     background: light
     type: light
@@ -42,5 +49,6 @@ format:
     css: styles.css
     toc: false
     number-sections: false
+    canonical-url: true
     grid:
       body-width: 1100px

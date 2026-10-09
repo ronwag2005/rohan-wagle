@@ -1,5 +1,10 @@
 ---
 title: "CV"
+description-meta: "Academic CV of Rohan Wagle: education, research and professional experience, publications, projects, and editorial positions."
+open-graph:
+  description: "Academic CV of Rohan Wagle: education, research and professional experience, publications, projects, and editorial positions."
+twitter-card:
+  description: "Academic CV of Rohan Wagle: education, research and professional experience, publications, projects, and editorial positions."
 ---
 
 <p class="page-intro">A full academic CV covering my education, research and professional experience, projects, and editorial positions. Last updated October 2026.</p>

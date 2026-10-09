@@ -1,5 +1,10 @@
 ---
 title: "Materials"
+description-meta: "Guides and documentation for phdid, an R package for partial homogeneity in staggered difference-in-differences, plus notes on economics and coding."
+open-graph:
+  description: "Guides and documentation for phdid, an R package for partial homogeneity in staggered difference-in-differences, plus notes on economics and coding."
+twitter-card:
+  description: "Guides and documentation for phdid, an R package for partial homogeneity in staggered difference-in-differences, plus notes on economics and coding."
 ---
 
 <p class="page-intro">Guides, documentation, and teaching notes. These currently cover <a href="https://cran.r-project.org/web/packages/phdid/index.html" target="_blank">phdid</a>, my R package for partial homogeneity in staggered difference-in-differences. I will be adding notes on economics studies and coding here as I go.</p>

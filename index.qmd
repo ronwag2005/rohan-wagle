@@ -1,5 +1,10 @@
 ---
 title: "Rohan Wagle"
+description-meta: "Rohan Wagle is a final-year B.A. (Hons. with Research) Economics student at Ashoka University, working on labour economics, development economics, firm dynamics and applied econometrics."
+open-graph:
+  description: "Rohan Wagle is a final-year B.A. (Hons. with Research) Economics student at Ashoka University, working on labour economics, development economics, firm dynamics and applied econometrics."
+twitter-card:
+  description: "Rohan Wagle is a final-year B.A. (Hons. with Research) Economics student at Ashoka University, working on labour economics, development economics, firm dynamics and applied econometrics."
 about:
   template: trestles
   image: assets/Main_Photo.jpeg

@@ -1,5 +1,10 @@
 ---
 title: "Research"
+description-meta: "Working papers and research projects by Rohan Wagle, spanning Bayesian difference-in-differences, labour economics, firm dynamics, and applied econometrics."
+open-graph:
+  description: "Working papers and research projects by Rohan Wagle, spanning Bayesian difference-in-differences, labour economics, firm dynamics, and applied econometrics."
+twitter-card:
+  description: "Working papers and research projects by Rohan Wagle, spanning Bayesian difference-in-differences, labour economics, firm dynamics, and applied econometrics."
 ---
 
 <div class="research-section-title">
