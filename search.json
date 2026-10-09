@@ -1,0 +1,44 @@
+[
+  {
+    "objectID": "cv.html",
+    "href": "cv.html",
+    "title": "CV",
+    "section": "",
+    "text": "A full academic CV covering my education, research and professional experience, projects, and editorial positions. Last updated October 2026.\n\n\n Download CV (PDF)"
+  },
+  {
+    "objectID": "materials.html",
+    "href": "materials.html",
+    "title": "Materials",
+    "section": "",
+    "text": "Guides, documentation, and teaching notes. These currently cover phdid, my R package for partial homogeneity in staggered difference-in-differences. I will be adding notes on economics studies and coding here as I go.\n\n\n\nphdid Vignettes\n\n\n\n\nWritten to walk someone through empirical applications of the package in R.\n\n\n\n\nphdid vignette\n\n\nMinimum Wages and Teen Employment: Recovering Partial Homogeneity\n\n\nWalks through the county-level minimum wage analysis of Callaway and Sant’Anna (2021): taking cohort-time effects from did::att_gt(), testing whether there is heterogeneity worth recovering, and grouping the effects with both a point partition and a Dirichlet Process posterior.\n\nRead the vignette \n\n\n\nphdid vignette\n\n\nWhen Partial Homogeneity Helps, and When It Does Not\n\n\nA reduced-scale Monte Carlo showing how the precision gains from pooling cohort-time effects depend on how well separated those effects are, and how the estimators compare on variance, bias, and interval coverage.\n\nRead the vignette \n\n\n\n\nPackage Reference\n\n\n\n\n\n\nCRAN\n\n\nphdid on CRAN\n\n\nThe package page — installation, dependencies, and release history. Install with install.packages(“phdid”).\n\nView on CRAN \n\n\n\nDocumentation\n\n\nReference Manual\n\n\nFull function-level documentation for the estimators, heterogeneity tests, sampler diagnostics, and the calibrated data-generating process.\n\nRead the manual"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Rohan Wagle",
+    "section": "",
+    "text": "Welcome!\nI am a final-year B.A. (Hons. with Research) Economics student and completing a minor in Mathematics at Ashoka University.\nMy academic and research interests center on empirical questions within labour economics, development economics and firm dynamics. I am particularly drawn to the intersection of applied econometrics with data science and machine learning techniques to draw out causal insights from micro-level data.\nThroughout my undergraduate studies, I have balanced my coursework with research roles and projects spanning fieldwork and computational domains. Currently, I am working on my final-year thesis on the firm-level effects of Artificial Intelligence in India.\nWork aside, I deeply enjoy reading modern history and philosophical texts, listening to and playing music across genres, and writing introspective long-form articles.\n\n Research   Materials   Writing   CV"
+  },
+  {
+    "objectID": "research.html",
+    "href": "research.html",
+    "title": "Research",
+    "section": "",
+    "text": "Working Papers\n\n\n\n\n\n2026\n\n\n\nA Bayesian Approach to Partial Homogeneity in Staggered Difference-in-Differences\n\n\nwith Parush Arora\n\n\nSoftware: phdid — an R package implementing the paper’s estimators and diagnostics, available on CRAN. Vignettes and documentation are under Materials.\n\n\nABS PDF  phdid package & vignettes\n\n\n\nAbstract: Addresses heterogeneous treatment effect estimation in staggered difference-in-differences designs, where existing approaches force a choice between an inefficient, fully-flexible estimator or a biased pooled one. We instead use a Dirichlet Process mixture model to identify natural groupings among cohort-time treatment effects, delivering point estimates, credible intervals, and co-clustering probabilities via a collapsed Gibbs sampler. Simulations show 26–52% variance reduction relative to standard flexible estimators while maintaining near-nominal coverage.\n\n\n\n\n\n\n\nOther Projects\n\n\n\n\n\n2026\n\n\n\nAI Adoption and Human Capital Formation in Developing Economies (Work in Progress)\n\n\nABS PDF\n\n\n\nAbstract: Develops a tractable theoretical framework combining task-based automation models (Acemoglu and Restrepo) with search-friction models of skill formation (Wasmer; Acemoglu) to study AI adoption in developing economies. The model identifies an “AI learning gap”: as general-purpose AI becomes more reliable, it simultaneously erodes workers’ incentive to acquire specialized, AI-complementary skills and firms’ incentive to train them — a dynamic that can trap the economy in a low-skill equilibrium. Derives comparative statics, three possible steady states, and testable empirical predictions.\n\n\n\n\n\n\n2026\n\n\n\nMobility Shocks and Employment Outcomes during COVID-19\n\n\nwith Yash Khaitan and Shagun Khetan\n\n\nABS PDF  CODE\n\n\n\nAbstract: Combines individual-level panel data from the Consumer Pyramids Household Survey with district-level Google mobility data to study how lockdown-induced mobility shocks affected employment in India, using a difference-in-differences design with individual and time fixed effects. Average employment effects are modest but mask sharp heterogeneity: losses are concentrated among the lowest income quartile and among salaried/self-employed workers, and are driven primarily by increased job exits rather than reduced hiring. Wage declines among those who remain employed are substantial, particularly for women.\n\n\n\n\n\n\n2026\n\n\n\nDimensionality Reduction for Sparse Movie Ratings Data: PCA via Efficient Power Method Implementation\n\n\nABS PDF  CODE  INTERACTIVE PLOT\n\n\n\nAbstract: Implements a Simultaneous Power Method with an “implicit centering” modification to compute PCA on the highly sparse (93.7%) MovieLens 100K ratings matrix without ever densifying it. The recovered components yield interpretable latent axes of movie taste — market engagement versus critical-acclaim-vs-blockbuster preference — and are used to test how users’ positions along these axes relate to age and gender.\n\n\n\n\n\n\n2025\n\n\n\nUsing Data Mining to Predict Secondary School Student Performance: A Replication and Extension\n\n\nwith Aditya Kumar, Rutupurna Debalina Naik, and Sidra Shaikh\n\n\nABS PDF  CODE\n\n\n\nSummary: Replicates Cortez and Silva’s (2008) study on predicting secondary-school final grades from school, social, and demographic data, confirming the original performance hierarchy across Decision Tree, SVM, and Random Forest models. Extends the work with wrapper- and filter-based feature selection, showing that a small set of 9–23 “core predictors” matches or beats the original 30+ feature models once prior grades are unavailable — with the largest gains for the SVM, consistent with its known sensitivity to irrelevant inputs."
+  },
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About",
+    "section": "",
+    "text": "About this site"
+  },
+  {
+    "objectID": "writing.html",
+    "href": "writing.html",
+    "title": "Writing",
+    "section": "",
+    "text": "Long-form journalism and cultural criticism written as a Junior Editor at The Edict, Ashoka University’s student newspaper, alongside personal essays kept on my blog.\n\n\n\nThe Edict\n\n\n\n\n\n\nJanuary 2026 · Latest\n\n\nGeese, Getting Killed — An Album Review\n\n\nOn the jagged, spontaneous energy of Geese’s latest record.\n\n\nRohan Wagle\n\nRead on Instagram \n\n\n\nOctober 2025\n\n\nChronicles of the Untranslated: Bringing India’s Non-Fiction Voices to the Centre\n\n\nOn the Chronicles series: a collaboration between the Ashoka Centre for Translation and Penguin Random House, and how letting translators choose the texts that matter to them resists market-driven publishing and widens the English reader’s sense of regional non-fiction.\n\n\nRohan Wagle\n\nRead the article \n\n\n\nOctober 2024\n\n\nCamille Claudel: Into the Fire — A Review\n\n\nA review of Jake Heggie’s six-part song cycle on the life of the sculptor Camille Claudel, performed by pianist Nadine Jo Crasto and counter-tenor Subin Mathai. The performance traces Claudel’s work, her years with Rodin, and the three decades of institutionalisation that followed.\n\n\nSoham Prasad and Rohan Wagle\n\nRead the article \n\n\n\nSeptember 2024\n\n\nFrom Plate to Politics: The Question of Diversity in Ashokan Palates\n\n\nHow a campus shift towards corporate food chains and away from regional cooking carries the caste politics of Indian food with it, and what goes missing when the palates of minority and lower-caste students are left off the menu.\n\n\nRohan Wagle, Teista Dwivedi, and Devadeepa\n\nRead the article \n\n\n\n\nBlog\n\n\n\n\n\n\n\n\n\nronwag.wordpress.com\n\n\nA running collection of my essays and personal writing."
+  }
+]

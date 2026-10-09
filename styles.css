@@ -1,0 +1,825 @@
+/* --- Clean System Typography & Custom Prussian Blue/Indigo Accent Configuration --- */
+
+/* A serif accent for headings/brand gives the site a more personal, editorial
+   feel while the body text stays in a formal, highly-readable system sans. */
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,500;0,600;0,700;1,500&display=swap');
+
+/* --- Palette -----------------------------------------------------------
+   Warm buttercream paper against the existing Prussian Blue. Cream and navy
+   sit opposite each other on the warm/cool axis, so the accent reads richer
+   here than it did on flat white. Neutrals are warm-shifted to match; a cool
+   grey border on cream reads as dirty rather than quiet. */
+:root {
+    --paper: #faf6ec;             /* page background: buttercream fog */
+    --surface: #fffdf7;           /* raised cards, buttons */
+    --surface-sunken: #f2ebdc;    /* abstract panels, banners, hovers */
+    --surface-sunken-hover: #ebe3d1;
+    --border: #e6ddc8;            /* warm hairline */
+    --border-strong: #d7ccb2;
+    --ink: #212529;               /* body copy */
+    --ink-muted: #6b6354;         /* warm muted grey, metadata only */
+    --accent: #1d3557;            /* Prussian Blue, unchanged */
+    --accent-dark: #112233;
+    --shadow-soft: rgba(90, 76, 48, 0.07);
+    --shadow-lift: rgba(29, 53, 87, 0.12);
+}
+
+/* 1. Global Styles & Original System Sans-Serif Body */
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    font-size: 1.05rem;
+    line-height: 1.6;
+    color: var(--ink);
+    background-color: var(--paper);
+}
+
+/* Cosmo paints html and several Quarto wrappers white in their own right, so
+   carry the paper tone through them or the cream stops at the body box. */
+html,
+.quarto-container,
+#quarto-content,
+main.content,
+.nav-footer {
+    background-color: var(--paper) !important;
+}
+
+/* 2. Original Headings with Dark Indigo/Prussian Blue Accent */
+h1, h2, h3, h4 {
+    font-family: 'Lora', Georgia, "Times New Roman", serif;
+    font-weight: 600;
+    color: #1d3557; /* Updated to Prussian Blue */
+    margin-top: 1.5rem;
+}
+
+/* Page titles and the homepage name sit on the blue heading scale */
+h1.title, .about-entity h1 {
+    color: var(--accent) !important;
+    font-weight: 600 !important;
+    font-size: 2.25rem;
+    margin-bottom: 0.5rem;
+    border-bottom: none;
+}
+
+/* Small Prussian Blue accent rule under page titles for a bit of polish */
+h1.title::after {
+    content: "";
+    display: block;
+    width: 3rem;
+    height: 3px;
+    margin-top: 0.9rem;
+    margin-bottom: 1rem;
+    background-color: #1d3557;
+    border-radius: 2px;
+}
+
+h2 {
+    font-size: 1.4rem;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    border-bottom: 1px solid var(--border);
+    padding-bottom: 0.3rem;
+}
+
+h3 {
+    font-size: 1.15rem;
+    margin-top: 1.5rem;
+    color: #1d3557; /* Subtitles inside tabs inherit Prussian Blue */
+}
+
+/* 3. Navigation Bar Customization (Top Header turned Prussian Blue) */
+.navbar {
+    background-color: #1d3557 !important; /* Rich Dark Indigo/Prussian Blue Top Bar */
+    border-bottom: none !important;
+    padding-top: 0.8rem !important;
+    padding-bottom: 0.8rem !important;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+}
+
+/* Top-left brand logo text turns white */
+.navbar-brand {
+    font-family: 'Lora', Georgia, serif !important;
+    font-weight: 600 !important;
+    font-size: 1.25rem !important;
+    letter-spacing: 0.01em;
+    color: #ffffff !important;
+}
+
+/* Navigation link items turn white instead of blending into the gray.
+   Scoped to .navbar: the page footer uses .nav-link too, and unscoped these
+   rules painted the footer icons white-on-cream (1.13:1, invisible). */
+.navbar .nav-link {
+    font-size: 0.95rem !important;
+    color: rgba(255, 255, 255, 0.8) !important; /* Slightly soft white for unselected links */
+    font-weight: 400 !important; /* Prevents text jumpiness */
+    transition: color 0.2s ease;
+}
+
+/* Active or hovered links pop in solid, clear white */
+.navbar .nav-link:hover, .navbar .nav-link.active {
+    color: #ffffff !important;
+    font-weight: 400 !important;
+    border-bottom: none !important;
+}
+
+/* A soft underline sweep on hover adds a bit of personality to nav links */
+.navbar .nav-link {
+    position: relative;
+}
+
+.navbar .nav-link::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0.1rem;
+    width: 0;
+    height: 1.5px;
+    background-color: #ffffff;
+    transition: width 0.2s ease;
+}
+
+.navbar .nav-link:hover::after {
+    width: 100%;
+}
+
+/* Fixes the navbar search icon/toggle to look sharp in white */
+.navbar-toggle,
+.navbar .nav-link .bi,
+.navbar-search-toggle .bi,
+.quarto-navigation-tool .bi {
+    color: #ffffff !important;
+}
+
+/* 3b. Page Footer */
+.nav-footer {
+    font-size: 0.85rem;
+    color: var(--ink-muted);
+    border-top: 1px solid var(--border) !important;
+    padding-top: 1.25rem !important;
+    padding-bottom: 1.25rem !important;
+}
+
+.nav-footer a {
+    color: var(--ink-muted);
+    border-bottom: none;
+}
+
+.nav-footer a:hover {
+    color: #1d3557;
+}
+
+.nav-footer .bi {
+    font-size: 1.35rem;
+}
+
+/* Reverts the area around your photo to standard clean background styles */
+.quarto-about-trestles .about-entity {
+    background-color: transparent !important;
+    color: #212529 !important;
+    padding: 0 !important;
+    border-radius: 0;
+}
+
+/* 4. Link & Anchor Styling (General Site Context) */
+a {
+    color: #1d3557; /* Updated to Prussian Blue */
+    text-decoration: none;
+    border-bottom: 1px solid transparent;
+    transition: all 0.2s ease;
+}
+
+a:hover {
+    color: #112233;
+    border-bottom: 1px solid #112233;
+}
+
+/* 5. Original About Template Image Tweaks */
+.about-entity img {
+    border: 1px solid var(--border);
+    padding: 4px;
+    background-color: var(--surface);
+    border-radius: 4px !important;
+    box-shadow: 0 4px 12px var(--shadow-soft);
+}
+
+/* 6. Forces GitHub, LinkedIn, and Email Links onto the Same Line closely under Name */
+.about-links {
+    display: flex !important;
+    flex-direction: row !important;
+    flex-wrap: nowrap !important;
+    justify-content: flex-start !important;
+    gap: 0.3rem !important;
+    margin-top: 0.4rem !important;
+}
+
+.about-links a {
+    font-size: 0.82rem !important;
+    font-weight: 500 !important;
+    border: 1px solid var(--border) !important;
+    border-radius: 4px !important;
+    padding: 0.4rem 0.55rem !important;
+    margin: 0 !important;
+    white-space: nowrap;
+    background-color: var(--surface) !important;
+    color: var(--ink) !important;
+    display: inline-flex !important;
+    align-items: center;
+    transition: all 0.15s ease;
+}
+
+.about-links a .bi {
+    font-size: 1.1rem;
+    margin-right: 0.25rem;
+}
+
+.about-links a:hover {
+    background-color: var(--surface-sunken) !important;
+    color: #1d3557 !important;
+    border-color: #1d3557 !important;
+    border-bottom: 1px solid #1d3557;
+}
+
+/* 7. List and Paragraph Spacing */
+p {
+    margin-bottom: 1.25rem;
+}
+
+ul, ol {
+    padding-left: 1.2rem;
+    margin-bottom: 1.25rem;
+}
+
+li {
+    margin-bottom: 0.4rem;
+}
+
+/* Custom Welcome Text Styling */
+.welcome-text {
+    display: block;
+    font-family: 'Lora', Georgia, "Times New Roman", serif;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #1d3557; /* Updated to Prussian Blue */
+    margin-bottom: 1rem;
+    letter-spacing: -0.02em;
+}
+
+/* --- Research Entry Specific Typography --- */
+/* Each entry is a two-column ledger: the year sits in a left rail, the paper
+   itself in the body column, separated by a hairline. */
+.project-item {
+    display: grid;
+    grid-template-columns: 4.5rem 1fr;
+    gap: 1.75rem;
+    margin-bottom: 2.75rem;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+.project-meta {
+    padding-top: 0.2rem;
+    text-align: right;
+}
+
+.project-body {
+    border-left: 1px solid var(--border);
+    padding-left: 1.75rem;
+}
+
+@media (max-width: 620px) {
+    .project-item {
+        grid-template-columns: 1fr;
+        gap: 0.35rem;
+    }
+    .project-meta {
+        text-align: left;
+    }
+    .project-body {
+        border-left: none;
+        padding-left: 0;
+    }
+}
+
+.project-title {
+    font-family: 'Lora', Georgia, serif;
+    font-size: 1.2rem;
+    font-weight: 700 !important;
+    line-height: 1.35;
+    color: #1d3557 !important; /* Paper titles match Prussian Blue */
+    margin-bottom: 0.35rem;
+}
+
+.project-authors {
+    font-size: 0.98rem;
+    color: var(--ink);
+    margin-bottom: 0.2rem;
+    font-weight: 400;
+}
+
+.project-year {
+    display: block;
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: #1d3557;
+    font-variant-numeric: tabular-nums;
+}
+
+.project-presentations {
+    font-size: 0.95rem;
+    color: var(--ink);
+    margin-bottom: 0.3rem;
+}
+
+/* Force justify text within the Quarto About page framework */
+.quarto-about-trestles p,
+.about-contents p,
+.about-entity p {
+    text-align: justify !important;
+    text-justify: inter-word !important;
+}
+
+/* --- Homepage Layout: balance the photo column against the bio --- */
+.quarto-about-trestles {
+    gap: 3rem;
+    align-items: flex-start !important;
+    margin-top: 1rem;
+}
+
+.quarto-about-trestles .about-entity {
+    flex: 0 0 32% !important;
+}
+
+.quarto-about-trestles .about-image {
+    max-width: 265px;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* The name sits closer to the photo, with the links centred beneath it */
+.quarto-about-trestles .about-entity h1.title {
+    font-size: 1.85rem;
+    margin-top: 1.25rem;
+    margin-bottom: 0.25rem;
+    text-align: center;
+}
+
+.quarto-about-trestles .about-entity h1.title::after {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.quarto-about-trestles .about-links {
+    justify-content: center !important;
+    flex-wrap: wrap !important;
+}
+
+/* Bio paragraphs get a touch more air now that the column is wider */
+.about-contents main.content > p {
+    font-size: 0.95rem;
+    margin-bottom: 1.15rem;
+}
+
+/* --- Homepage: entry points into the rest of the site ---
+   A single row of labels rather than blocks: lighter against the bio, and all
+   four stay on one line. Pandoc wraps these inline anchors in a <p>, so the
+   row styles are applied to both. */
+.home-explore,
+.home-explore > p {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.home-explore {
+    margin-top: 2.25rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--border);
+}
+
+.home-explore > p {
+    margin: 0;
+}
+
+.explore-label {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.45rem;
+    font-size: 0.98rem;
+    font-weight: 500;
+    color: var(--accent);
+    background-color: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 999px;
+    padding: 0.6rem 1.25rem;
+    white-space: nowrap;
+    transition: background-color 0.18s ease, border-color 0.18s ease, color 0.18s ease;
+}
+
+.explore-label:hover {
+    background-color: var(--surface-sunken);
+    border-color: var(--border-strong);
+    color: var(--accent-dark);
+}
+
+/* Trailing chevron: small, and nudges on hover */
+.explore-label .bi {
+    font-size: 0.78rem;
+    transition: transform 0.18s ease;
+}
+
+.explore-label:hover .bi {
+    transform: translateX(2px);
+}
+
+/* Leading topical icon: sized to the label text and stays put */
+.explore-label .explore-icon {
+    font-size: 1rem;
+    opacity: 0.8;
+    margin-right: 0.1rem;
+    transform: none !important;
+}
+
+/* Too narrow for four across: stack them as a tidy list rather than
+   letting them wrap two-and-two. */
+@media (max-width: 575px) {
+    .home-explore,
+    .home-explore > p {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .explore-label {
+        justify-content: flex-start;
+    }
+
+    /* Pin the trailing chevron to the right edge of the stacked row */
+    .explore-label > .bi:last-child {
+        margin-left: auto;
+    }
+}
+
+/* --- Research Page Structural Elements --- */
+
+/* Section titles ("Working Papers", "Other Projects") */
+.research-section-title h2 {
+    border-bottom: none;
+    margin-top: 2.5rem;
+    margin-bottom: 0.5rem;
+    padding-bottom: 0;
+}
+
+.research-section-title:first-of-type h2 {
+    margin-top: 0.5rem;
+}
+
+/* Thin rule under each section title */
+hr.section-divider {
+    border: none;
+    border-top: 1px solid #1d3557;
+    opacity: 0.25;
+    margin: 0 0 1.75rem 0;
+}
+
+/* Thin rule between individual entries within a section */
+hr.entry-divider {
+    border: none;
+    border-top: 1px solid var(--border);
+    margin: 2rem 0;
+}
+
+/* Row of action buttons under each project entry */
+/* Pandoc may wrap these inline controls in a <p>; style both so the row of
+   buttons lays out identically either way. */
+.project-buttons,
+.project-buttons > p {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.project-buttons {
+    margin: 0.85rem 0 0;
+}
+
+.project-buttons > p {
+    margin: 0;
+    flex: 1 1 auto;
+}
+
+.btn-research {
+    display: inline-flex;
+    align-items: center;
+    line-height: 1.4;
+    user-select: none;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    font-size: 0.85rem;
+    font-weight: 500;
+    color: var(--ink);
+    background-color: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    padding: 0.4rem 0.9rem;
+    cursor: pointer;
+    white-space: nowrap;
+    transition: all 0.15s ease;
+}
+
+.btn-research:hover {
+    background-color: var(--surface-sunken);
+    color: #1d3557;
+    border-color: #1d3557;
+    text-decoration: none;
+}
+
+/* Expandable abstract/summary panel */
+.abstract-content {
+    margin-top: 0.75rem;
+    padding: 0.9rem 1.1rem;
+    background-color: var(--surface-sunken);
+    border-left: 3px solid #1d3557;
+    border-radius: 0 4px 4px 0;
+}
+
+.abstract-content p {
+    margin-bottom: 0;
+    font-size: 0.95rem;
+    color: var(--ink);
+}
+
+/* --- Shared Page Intro Blurb --- */
+.page-intro {
+    font-size: 0.95rem;
+    color: var(--ink);
+    max-width: 52rem;
+    margin-bottom: 2rem;
+}
+
+/* Lead-in line under a section rule */
+.section-note {
+    font-size: 0.95rem;
+    color: var(--ink);
+    max-width: 52rem;
+    margin-top: -0.5rem;
+    margin-bottom: 1.5rem;
+}
+
+/* Software/package note under a paper entry */
+.project-software {
+    font-size: 0.95rem;
+    color: var(--ink);
+    margin-bottom: 0.3rem;
+}
+
+/* Small qualifier inside a research button, e.g. "R package" */
+.btn-note {
+    font-weight: 400;
+    text-transform: none;
+    color: var(--ink-muted);
+    margin-left: 0.35rem;
+}
+
+.btn-research .bi {
+    margin-right: 0.35rem;
+}
+
+/* --- Writing Page --- */
+.writing-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(330px, 100%), 1fr));
+    gap: 1.5rem;
+    margin-bottom: 3rem;
+}
+
+.writing-card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--surface);
+    border: 1px solid var(--border);
+    border-top: 3px solid var(--accent);
+    border-radius: 8px;
+    padding: 1.5rem;
+    box-shadow: 0 1px 3px var(--shadow-soft);
+    transition: transform 0.18s ease, box-shadow 0.18s ease;
+}
+
+/* Makes the whole card a single click target while keeping the markup
+   block-level (an inline <a> wrapper gets split apart by Pandoc). */
+.stretched-link::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1;
+}
+
+.writing-title a {
+    color: inherit;
+    border-bottom: none;
+}
+
+.writing-card:hover .writing-title a {
+    color: #112233;
+}
+
+.writing-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 24px var(--shadow-lift);
+}
+
+.writing-date {
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: var(--ink-muted);
+    margin-bottom: 0.5rem;
+}
+
+.writing-title {
+    font-family: 'Lora', Georgia, serif;
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: #1d3557;
+    line-height: 1.35;
+    margin-bottom: 0.6rem;
+}
+
+.writing-desc {
+    font-size: 0.92rem;
+    color: var(--ink);
+    flex-grow: 1;
+    margin-bottom: 0.9rem;
+}
+
+.writing-byline {
+    font-size: 0.85rem;
+    font-style: italic;
+    color: var(--ink-muted);
+    margin-bottom: 0.9rem;
+}
+
+.writing-link {
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: #1d3557;
+    margin-top: auto;
+}
+
+.writing-card:hover .writing-link {
+    color: #112233;
+}
+
+/* Blog banner */
+.blog-banner {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 1.25rem;
+    background-color: var(--surface-sunken);
+    border: 1px solid var(--border);
+    border-left: 3px solid #1d3557;
+    border-radius: 0 8px 8px 0;
+    padding: 1.4rem 1.6rem;
+    color: inherit;
+    transition: background-color 0.18s ease, box-shadow 0.18s ease;
+}
+
+.blog-banner:hover {
+    background-color: var(--surface-sunken-hover);
+    box-shadow: 0 6px 18px var(--shadow-lift);
+}
+
+.blog-banner-title a {
+    color: inherit;
+    border-bottom: none;
+}
+
+.blog-banner-icon {
+    font-size: 1.8rem;
+    color: #1d3557;
+    line-height: 1;
+}
+
+.blog-banner-body {
+    flex-grow: 1;
+}
+
+.blog-banner-title {
+    font-family: 'Lora', Georgia, serif;
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: #1d3557;
+    margin-bottom: 0.3rem;
+}
+
+.blog-banner-desc {
+    font-size: 0.92rem;
+    color: var(--ink);
+    margin-bottom: 0;
+}
+
+.blog-banner-arrow {
+    font-size: 1.3rem;
+    color: #1d3557;
+    transition: transform 0.18s ease;
+}
+
+.blog-banner:hover .blog-banner-arrow {
+    transform: translateX(4px);
+}
+
+/* --- CV Page --- */
+.cv-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    margin-bottom: 2rem;
+}
+
+.cv-actions a {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.45rem;
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: #ffffff;
+    background-color: #1d3557;
+    border: 1px solid #1d3557;
+    border-radius: 4px;
+    padding: 0.5rem 1rem;
+}
+
+.cv-actions a:hover {
+    background-color: #112233;
+    border-color: #112233;
+    color: #ffffff;
+}
+
+.cv-actions a.cv-secondary {
+    color: var(--accent);
+    background-color: var(--surface);
+}
+
+.cv-actions a.cv-secondary:hover {
+    background-color: var(--surface-sunken);
+    color: #112233;
+}
+
+.cv-embed {
+    width: 100%;
+    height: 900px;
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    box-shadow: 0 2px 10px var(--shadow-soft);
+}
+
+@media (max-width: 768px) {
+    .cv-embed {
+        height: 600px;
+    }
+}
+
+/* --- Writing: featured (most recent) article spans the full grid --- */
+.writing-featured {
+    grid-column: 1 / -1;
+}
+
+.writing-featured .writing-title {
+    font-size: 1.45rem;
+}
+
+.writing-featured .writing-desc {
+    font-size: 1rem;
+    max-width: 52rem;
+}
+
+@media (min-width: 700px) {
+    .writing-featured {
+        padding: 1.9rem 2rem;
+    }
+}
+
+/* --- CV: keep the action row and preview visually joined --- */
+.cv-embed {
+    margin-top: 0.5rem;
+}
+
+/* --- Writing: materials grid (two wider cards) --- */
+.materials-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(420px, 100%), 1fr));
+    gap: 1.5rem;
+    margin-bottom: 3rem;
+}
+
+.materials-grid code {
+    font-size: 0.85em;
+    color: var(--accent);
+    background-color: var(--surface-sunken);
+    padding: 0.1rem 0.3rem;
+    border-radius: 3px;
+}
